@@ -1,60 +1,59 @@
-'use client'
+'use client';
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import owner from '../public/owner.jpg';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section id='about' className='py-20 bg-white'>
+      <div className='container mx-auto px-4'>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold text-center text-gray-800 mb-8"
+          className='text-3xl font-bold text-center text-gray-800 mb-8'
         >
           About Me
         </motion.h2>
-        <div className="flex flex-col md:flex-row items-center justify-between">
+        <div className='flex flex-col md:flex-row items-center'>
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="md:w-1/2 mb-8 md:mb-0"
+            className='md:w-1/2 mb-8 md:mb-0'
           >
             <Image
-              src="/placeholder.svg"
-              alt="Your Name"
-              width={400}
-              height={400}
-              className="rounded-full"
+              src={owner}
+              alt='Your Name'
+              width={250}
+              height={250}
+              className='rounded-full mx-auto'
             />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="md:w-1/2"
+            className='md:w-1/2'
           >
-            <p className="text-gray-600 mb-4">
-              I'm a passionate full stack developer with experience in building web applications using modern technologies. My expertise includes React, Node.js, and database management.
+            <p className='text-4xl font-bold text-red-600 mb-8 text-center tracking-widest'>
+              熱き想いよ世界へ
             </p>
-            <p className="text-gray-600 mb-4">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying outdoor activities.
+            <p className='text-xl text-gray-700 mb-4 text-center'>
+              フロントエンジニア歴２年と
+              <br />
+              まだまだ経験は浅いですが、
+              <br />
+              あなたの色々なことをインターネットを通じて、
+              <br />
+              世界中の人達へ伝えていきたい
             </p>
-            <div className="flex flex-wrap gap-2">
-              {['JavaScript', 'React', 'Node.js', 'Python', 'SQL'].map((skill) => (
-                <span key={skill} className="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm">
-                  {skill}
-                </span>
-              ))}
-            </div>
           </motion.div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
-
+export default About;
