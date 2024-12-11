@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -95,13 +96,17 @@ const Header = () => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.2 + index * 0.2 }}
                 >
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    className='text-gray-600 hover:text-blue-600 relative group transition-colors duration-300 tracking-wider'
+                  <Link
+                    to={item.toLowerCase()}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    className='text-gray-600 hover:text-blue-600 relative group transition-colors duration-300 tracking-wider cursor-pointer'
                   >
                     {item}
                     <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300' />
-                  </a>
+                  </Link>
                 </motion.li>
               ))}
             </ul>
@@ -125,14 +130,18 @@ const Header = () => {
                 className='w-full text-center'
               >
                 <div className='inline-block relative'>
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    className='block py-1 text-gray-600 hover:text-blue-600 group transition-colors duration-300 tracking-wider'
+                  <Link
+                    to={item.toLowerCase()}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    className='block py-1 text-gray-600 hover:text-blue-600 group transition-colors duration-300 tracking-wider cursor-pointer'
                     onClick={() => setIsOpen(false)}
                   >
                     {item}
                     <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300' />
-                  </a>
+                  </Link>
                 </div>
               </motion.li>
             ))}
