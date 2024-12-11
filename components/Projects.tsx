@@ -28,6 +28,7 @@ const Projects = () => {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="text-3xl font-bold text-center text-gray-800 mb-8"
         >
@@ -40,6 +41,7 @@ const Projects = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
               className="bg-white rounded-lg shadow-md overflow-hidden"
             >
               <div className="p-6">

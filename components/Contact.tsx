@@ -29,6 +29,7 @@ const Contact = () => {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="text-3xl font-bold text-center text-gray-800 mb-8"
         >
@@ -37,6 +38,7 @@ const Contact = () => {
         <motion.form
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
           onSubmit={handleSubmit}
           className="max-w-lg mx-auto"

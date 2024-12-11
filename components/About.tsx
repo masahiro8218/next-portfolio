@@ -11,6 +11,7 @@ const About = () => {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className='text-3xl font-bold text-center text-gray-800 mb-8'
         >
@@ -20,6 +21,7 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className='md:w-1/2 mb-8 md:mb-0'
           >
@@ -34,6 +36,7 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className='md:w-1/2'
           >
