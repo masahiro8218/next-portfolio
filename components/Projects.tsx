@@ -5,14 +5,21 @@ import { ExternalLink, Github } from 'lucide-react'
 
 const projects = [
   {
-    title: 'Project 1',
+    title: 'portfolio_1',
     description: 'A brief description of Project 1',
     technologies: ['React', 'Node.js', 'MongoDB'],
     github: 'https://github.com/yourusername/project1',
     live: 'https://project1.com'
   },
   {
-    title: 'Project 2',
+    title: 'portfolio_2',
+    description: 'A brief description of Project 2',
+    technologies: ['Vue.js', 'Express', 'PostgreSQL'],
+    github: 'https://github.com/yourusername/project2',
+    live: 'https://project2.com'
+  },
+  {
+    title: 'portfolio_3',
     description: 'A brief description of Project 2',
     technologies: ['Vue.js', 'Express', 'PostgreSQL'],
     github: 'https://github.com/yourusername/project2',
