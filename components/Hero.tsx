@@ -38,7 +38,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className='text-4xl md:text-6xl font-bold text-red-600 mb-4'
           >
-            熱き想いよ!
+            熱き想いよ
           </motion.h1>
 
           <motion.p
