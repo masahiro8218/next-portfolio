@@ -6,11 +6,11 @@ import { useState } from 'react';
 
 const projects = [
   {
-    title: 'portfolio_1',
-    description: 'A brief description of Project 1',
-    technologies: ['React', 'Node.js', 'MongoDB'],
-    github: 'https://github.com/yourusername/project1',
-    live: 'https://project1.com',
+    title: 'Mesluz Portfolio',
+    description: 'This is the source code for this portfolio.',
+    technologies: ['Next.js', 'TailwindCSS', 'TypeScript', 'Framer Motion'],
+    github: 'https://github.com/masahiro8218/next-portfolio',
+    live: 'https://next-portfolio-two-inky.vercel.app/',
   },
   {
     title: 'portfolio_2',
