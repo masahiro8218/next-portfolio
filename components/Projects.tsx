@@ -13,62 +13,11 @@ const projects = [
     live: 'https://next-portfolio-two-inky.vercel.app/',
   },
   {
-    title: 'portfolio_2',
-    description: 'A brief description of Project 2',
-    technologies: ['Vue.js', 'Express', 'PostgreSQL'],
-    github: 'https://github.com/yourusername/project2',
-    live: 'https://project2.com',
+    title: 'Mesluz soccer school',
+    description: 'An imaginary soccer school website.',
+    technologies: ['Next.js', 'TailwindCSS', 'React-countup', 'Framer Motion'],
+    github: 'https://github.com/masahiro8218/next-soccer_school',
   },
-  {
-    title: 'portfolio_3',
-    description: 'A brief description of Project 2',
-    technologies: ['Vue.js', 'Express', 'PostgreSQL'],
-    github: 'https://github.com/yourusername/project2',
-    live: 'https://project2.com',
-  },
-  {
-    title: 'portfolio_4',
-    description: 'A brief description of Project 2',
-    technologies: ['Vue.js', 'Express', 'PostgreSQL'],
-    github: 'https://github.com/yourusername/project2',
-    live: 'https://project2.com',
-  },
-  {
-    title: 'portfolio_5',
-    description: 'A brief description of Project 2',
-    technologies: ['Vue.js', 'Express', 'PostgreSQL'],
-    github: 'https://github.com/yourusername/project2',
-    live: 'https://project2.com',
-  },
-  {
-    title: 'portfolio_6',
-    description: 'A brief description of Project 2',
-    technologies: ['Vue.js', 'Express', 'PostgreSQL'],
-    github: 'https://github.com/yourusername/project2',
-    live: 'https://project2.com',
-  },
-  {
-    title: 'portfolio_7',
-    description: 'A brief description of Project 2',
-    technologies: ['Vue.js', 'Express', 'PostgreSQL'],
-    github: 'https://github.com/yourusername/project2',
-    live: 'https://project2.com',
-  },
-  {
-    title: 'portfolio_8',
-    description: 'A brief description of Project 2',
-    technologies: ['Vue.js', 'Express', 'PostgreSQL'],
-    github: 'https://github.com/yourusername/project2',
-    live: 'https://project2.com',
-  },
-  {
-    title: 'portfolio_9',
-    description: 'A brief description of Project 2',
-    technologies: ['Vue.js', 'Express', 'PostgreSQL'],
-    github: 'https://github.com/yourusername/project2',
-    live: 'https://project2.com',
-  },
-  // Add more projects as needed
 ];
 
 const Projects = () => {
