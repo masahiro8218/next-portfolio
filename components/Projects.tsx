@@ -10,7 +10,7 @@ const projects = [
     description: 'This is the source code for this portfolio.',
     technologies: ['Next.js', 'TailwindCSS', 'TypeScript', 'Framer Motion'],
     github: 'https://github.com/masahiro8218/next-portfolio',
-    live: 'https://next-portfolio-two-inky.vercel.app/',
+    // live: 'https://next-portfolio-two-inky.vercel.app/',
   },
   {
     title: 'Mesluz soccer school',
@@ -81,7 +81,7 @@ const Projects = () => {
                     <Github className='w-5 h-5 mr-1' />
                     GitHub
                   </a>
-                  <a
+                  {/* <a
                     href={project.live}
                     target='_blank'
                     rel='noopener noreferrer'
@@ -89,7 +89,7 @@ const Projects = () => {
                   >
                     <ExternalLink className='w-5 h-5 mr-1' />
                     Live Demo
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </motion.div>
