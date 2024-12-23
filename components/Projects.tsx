@@ -19,6 +19,13 @@ const projects = [
     github: 'https://github.com/masahiro8218/next-soccer_school',
     live: 'https://next-soccer-school.vercel.app/',
   },
+  {
+    title: 'Mesluz cram school',
+    description: 'An imaginary cram school website.',
+    technologies: ['Next.js', 'TailwindCSS', 'AOS', 'React-Scroll'],
+    github: 'https://github.com/masahiro8218/next-cram-school',
+    live: 'https://next-cram-school.vercel.app/',
+  },
 ];
 
 const Projects = () => {
