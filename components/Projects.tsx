@@ -6,25 +6,32 @@ import { useState } from 'react';
 
 const projects = [
   {
-    title: 'Mesluz Portfolio',
+    title: 'Portfolio',
     description: 'This is the source code for this portfolio.',
     technologies: ['Next.js', 'TailwindCSS', 'TypeScript', 'Framer Motion'],
     github: 'https://github.com/masahiro8218/next-portfolio',
     live: 'https://next-portfolio-two-inky.vercel.app/',
   },
   {
-    title: 'Mesluz soccer school',
+    title: 'soccer school',
     description: 'An imaginary soccer school website.',
     technologies: ['Next.js', 'TailwindCSS', 'Framer Motion'],
     github: 'https://github.com/masahiro8218/next-soccer_school',
     live: 'https://next-soccer-school.vercel.app/',
   },
   {
-    title: 'Mesluz cram school',
+    title: 'cram school',
     description: 'An imaginary cram school website.',
     technologies: ['Next.js', 'TailwindCSS', 'AOS', 'React-Scroll'],
     github: 'https://github.com/masahiro8218/next-cram-school',
     live: 'https://next-cram-school.vercel.app/',
+  },
+  {
+    title: 'Drag and Drop',
+    description: 'drag-and-drop app.',
+    technologies: ['React17', 'react-beautiful-dnd'],
+    github: 'https://github.com/masahiro8218/react-drag_and_drop',
+    live: 'https://masahiro8218.com/',
   },
 ];
 

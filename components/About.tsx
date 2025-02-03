@@ -44,7 +44,7 @@ const About = () => {
               熱き想いよ世界へ
             </p>
             <p className='text-xl text-gray-700 mb-4 text-center'>
-              フロントエンジニア歴２年と
+              フロントエンドエンジニア歴２年と
               <br />
               まだまだ経験は浅いですが、
               <br />
