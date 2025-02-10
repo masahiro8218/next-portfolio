@@ -27,12 +27,13 @@ const projects = [
     live: 'https://next-cram-school.vercel.app/',
   },
   {
-    title: 'Drag and Drop',
-    description: 'drag-and-drop app.',
+    title: 'task management app',
+    description: 'A task management app.',
     technologies: ['React17', 'react-beautiful-dnd'],
-    github: 'https://github.com/masahiro8218/react-drag_and_drop',
+    github: 'https://github.com/masahiro8218/react-task-app',
     live: 'https://masahiro8218.com/',
   },
+
 ];
 
 const Projects = () => {
