@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import mainImage from '../public/main.png';
 import ParticleImage from './ParticleImage';
 

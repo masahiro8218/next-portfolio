@@ -11,6 +11,8 @@ const ParticleImage: React.FC<ParticleImageProps> = ({ imageUrl }) => {
   useEffect(() => {
     if (!imageUrl || !containerRef.current) return;
 
+    const currentContainer = containerRef.current; // containerRef.current をローカル変数にコピー
+
     // シーン、カメラ、レンダラーの作成
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
@@ -24,10 +26,10 @@ const ParticleImage: React.FC<ParticleImageProps> = ({ imageUrl }) => {
     const renderer = new THREE.WebGLRenderer({ antialias: true }); // レンダラーの作成
     renderer.setPixelRatio(window.devicePixelRatio); // ピクセル比を設定
     renderer.setSize(
-      containerRef.current.clientWidth,
-      containerRef.current.clientHeight
+      currentContainer.clientWidth,
+      currentContainer.clientHeight
     ); // レンダラーのサイズ
-    containerRef.current.appendChild(renderer.domElement); // レンダラーをDOMに追加
+    currentContainer.appendChild(renderer.domElement); // レンダラーをDOMに追加
 
     // 画像の読み込みとパーティクル生成
     const textureLoader = new THREE.TextureLoader();
@@ -133,13 +135,13 @@ const ParticleImage: React.FC<ParticleImageProps> = ({ imageUrl }) => {
 
       // リサイズ処理
       const handleResize = () => {
-        if (!containerRef.current) return;
+        if (!currentContainer) return;
         camera.aspect =
-          containerRef.current.clientWidth / containerRef.current.clientHeight; // アスペクト比を更新
+          currentContainer.clientWidth / currentContainer.clientHeight; // アスペクト比を更新
         camera.updateProjectionMatrix(); // カメラのプロジェクションマトリックスを更新
         renderer.setSize(
-          containerRef.current.clientWidth,
-          containerRef.current.clientHeight
+          currentContainer.clientWidth,
+          currentContainer.clientHeight
         ); // レンダラーのサイズを更新
       };
       window.addEventListener('resize', handleResize); // リサイズイベントを登録
@@ -148,9 +150,9 @@ const ParticleImage: React.FC<ParticleImageProps> = ({ imageUrl }) => {
 
     // コンポーネントのアンマウント時にレンダラーを破棄
     return () => {
-      if (containerRef.current) {
-        while (containerRef.current.firstChild) {
-          containerRef.current.removeChild(containerRef.current.firstChild);
+      if (currentContainer) {
+        while (currentContainer.firstChild) {
+          currentContainer.removeChild(currentContainer.firstChild);
         }
       }
     };
