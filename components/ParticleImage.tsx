@@ -50,11 +50,15 @@ const ParticleImage: React.FC<ParticleImageProps> = ({ imageUrl }) => {
       const colors: number[] = []; // 頂点の色
       const targets: number[] = []; // 目標座標
 
+      const maxParticles = 3000; // パーティクルの最大数を設定
+      let particleCount = 0;
+
       // パーティクルの生成
       for (let y = 0; y < canvas.height; y += 2) {
-        // y座標を1ピクセルずつスキップ
+        // y座標を2ピクセルずつスキップ
         for (let x = 0; x < canvas.width; x += 2) {
-          // x座標を1ピクセルずつスキップ
+          // x座標を2ピクセルずつスキップ
+          if (particleCount >= maxParticles) break; // パーティクルの最大数を超えたら処理を中断
           const index = (y * canvas.width + x) * 4; // ピクセルデータのインデックス
           let r = pixels[index] / 255; // 赤
           let g = pixels[index + 1] / 255; // 緑
@@ -112,26 +116,33 @@ const ParticleImage: React.FC<ParticleImageProps> = ({ imageUrl }) => {
             .position as THREE.BufferAttribute; // 頂点座標の属性
           const targetAttribute = particlesGeometry.attributes
             .target as THREE.BufferAttribute; // 目標座標の属性
+          let allParticlesStopped = true;
 
           // パーティクルを目標座標に移動
           for (let i = 0; i < positionAttribute.count; i++) {
             const dx = targetAttribute.getX(i) - positionAttribute.getX(i); // x座標の差分
             const dy = targetAttribute.getY(i) - positionAttribute.getY(i); // y座標の差分
             const dz = targetAttribute.getZ(i) - positionAttribute.getZ(i); // z座標の差分
+            const speed = Math.sqrt(dx * dx + dy * dy + dz * dz);
 
             // 移動速度を調整
-            positionAttribute.setX(i, positionAttribute.getX(i) + dx * 0.02);
-            positionAttribute.setY(i, positionAttribute.getY(i) + dy * 0.02);
-            positionAttribute.setZ(i, positionAttribute.getZ(i) + dz * 0.02);
+            if (speed > 0.015) {
+              positionAttribute.setX(i, positionAttribute.getX(i) + dx * 0.03);
+              positionAttribute.setY(i, positionAttribute.getY(i) + dy * 0.03);
+              positionAttribute.setZ(i, positionAttribute.getZ(i) + dz * 0.03);
+              allParticlesStopped = false;
+            }
           }
 
           positionAttribute.needsUpdate = true; // 頂点座標の更新を通知
           renderer.render(scene, camera); // レンダリング
-          requestAnimationFrame(animate); // アニメーションを繰り返す
+          if (!allParticlesStopped) {
+            requestAnimationFrame(animate);
+          }
         };
 
         animate(); // アニメーションを開始
-      }, 1500); // 1500ミリ秒 = 1.5秒
+      }, 1800); // 1500ミリ秒 = 1.5秒
 
       // リサイズ処理
       const handleResize = () => {
