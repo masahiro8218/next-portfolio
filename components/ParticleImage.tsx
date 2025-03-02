@@ -51,7 +51,7 @@ const ParticleImage: React.FC<ParticleImageProps> = ({ imageUrl }) => {
       const targets: number[] = []; // 目標座標
 
       const maxParticles = 3000; // パーティクルの最大数を設定
-      let particleCount = 0;
+      const particleCount = 0;
 
       // パーティクルの生成
       for (let y = 0; y < canvas.height; y += 2) {
