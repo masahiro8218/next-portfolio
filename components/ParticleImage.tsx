@@ -50,7 +50,7 @@ const ParticleImage: React.FC<ParticleImageProps> = ({ imageUrl }) => {
       const colors: number[] = []; // 頂点の色
       const targets: number[] = []; // 目標座標
 
-      const maxParticles = 3000; // パーティクルの最大数を設定
+      const maxParticles = 1000; // パーティクルの最大数を設定
       const particleCount = 0;
 
       // パーティクルの生成
@@ -127,9 +127,9 @@ const ParticleImage: React.FC<ParticleImageProps> = ({ imageUrl }) => {
 
             // 移動速度を調整
             if (speed > 0.015) {
-              positionAttribute.setX(i, positionAttribute.getX(i) + dx * 0.03);
-              positionAttribute.setY(i, positionAttribute.getY(i) + dy * 0.03);
-              positionAttribute.setZ(i, positionAttribute.getZ(i) + dz * 0.03);
+              positionAttribute.setX(i, positionAttribute.getX(i) + dx * 0.035);
+              positionAttribute.setY(i, positionAttribute.getY(i) + dy * 0.035);
+              positionAttribute.setZ(i, positionAttribute.getZ(i) + dz * 0.035);
               allParticlesStopped = false;
             }
           }
