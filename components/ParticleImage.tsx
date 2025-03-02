@@ -131,7 +131,7 @@ const ParticleImage: React.FC<ParticleImageProps> = ({ imageUrl }) => {
         };
 
         animate(); // アニメーションを開始
-      }, 1500); // 1500ミリ秒 = 1.5秒
+      }, 1800); // 1500ミリ秒 = 1.5秒
 
       // リサイズ処理
       const handleResize = () => {
